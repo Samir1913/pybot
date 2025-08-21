@@ -1,0 +1,45 @@
+api_football:
+  api_key: "11adb050cbf5ac71a092ec3674e30559"
+
+betfair:
+  username: "magar9567@gmail.com"
+  password: "Sap19yoG13"
+  app_key: "rIWeGKo1GKnPKCsQ"
+  certs_path: "C:/betfair4/certs"  # or "/home/ubuntu/certs" (must contain client-2048.crt and client-2048.key)
+
+email:
+  enabled: true
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  use_tls: true
+  username: "magar9567@gmail.com"
+  password: "bdvp kpth tskp cxcl"
+  from_addr: "magar9567@gmail.com"
+  to_addrs: ["sawmeraw.thapa@gmail.com"]
+
+settings:
+  countries: ["Colombia","Myanmar","England","France","Germany","Italy","Spain","Portugal","Chile","Paraguay","Argentina","Brazil","Uruguay","USA","Austria"]
+  min_minute: 30
+  max_minute: 70
+  cashout_minute: 71
+
+  # Odds constraints
+  max_price: 20.0
+
+  # Polling / retries
+  poll_seconds: 15
+  market_check_retry: 3
+  market_check_delay: 3
+
+  # Stakes
+  stake: 5.0            # normal live stake
+  test_mode: true       # true = testing; false = live sizing
+  test_stake: 0.50      # used if test_mode=true AND min_liability_mode=false
+  min_liability_mode: true       # if true and test_mode=true -> size stake to keep liability <= max_test_liability
+  max_test_liability: 1.00       # (£) max liability you want in test
+  test_stake_cap: 2.0            # never exceed this when min_liability_mode is active
+
+  # Betfair constraints
+  min_back_stake: 2.0   # typical Betfair min back stake (set what your account enforces)
+  # Optionally control live liability too (skip bet if exceeded)
+  # max_live_liability: 15.0
