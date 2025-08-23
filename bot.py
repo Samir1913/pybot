@@ -2,11 +2,13 @@ import asyncio
 import logging
 import yaml
 import time
+import os
 from datetime import datetime, timezone
 import requests
 from betfairlightweight import APIClient
 from betfairlightweight.filters import market_filter, price_projection
 from dateutil import parser
+from dotenv import load_dotenv
 
 # ------------ logging ------------
 logging.basicConfig(
@@ -15,6 +17,12 @@ logging.basicConfig(
     handlers=[logging.FileHandler("over15_bot.log"), logging.StreamHandler()]
 )
 log = logging.getLogger("over15bot")
+
+
+
+# Load environment variables
+load_dotenv("/etc/bot.env")
+
 
 # ------------ load config ------------
 with open("config.yml", "r", encoding="utf-8") as f:
